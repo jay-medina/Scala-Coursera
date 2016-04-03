@@ -33,3 +33,5 @@ books.flatMap(b =>
   //for (a <- b.authors withFilter (a => a startsWith "Bird")) yield b.title
   b.authors.withFilter(a=> a startsWith "Bird") map (y => b.title)
 )
+
+(List(1,2,3,4,5) foldLeft 0)((x, y) => x + y)
