@@ -1,0 +1,1 @@
+List("a","bb","c").groupBy(str => str)
