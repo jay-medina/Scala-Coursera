@@ -179,17 +179,24 @@ object Anagrams {
    */
   def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
     val sOccurs: Occurrences = sentenceOccurrences(sentence)
-    val allComb: List[Occurrences] = combinations(sOccurs)
+    sentenceAnagramsInner(sOccurs)
+  }
 
-    for {
-      i <- allComb
-    } yield dictionaryByOccurrences(i)
-
+  def sentenceAnagramsInner(o: Occurrences): List[Sentence] = {
+    if(o.isEmpty) List(Nil)
+    else {
+      val combs = combinations(o)
+      for {
+        i <- combs if dictionaryByOccurrences.keySet(i)
+        j <- dictionaryByOccurrences(i)
+        s <- sentenceAnagramsInner(subtract(o,i))
+      } yield {j :: s}
+    }
   }
 
   def main(args: Array[String]) {
-    val occurrences: Occurrences = List(('a', 2), ('b', 2))
+    val sen: Sentence = List("I", "Love", "You")
 
-    println(combinations(occurrences))
+    println(sentenceAnagrams(sen).toSet)
   }
 }
