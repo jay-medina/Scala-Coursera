@@ -1,5 +1,5 @@
 
-package com.mrfunkycold.demo.demo
+package com.mrfunkycold.demo
 
 class Demo {
 

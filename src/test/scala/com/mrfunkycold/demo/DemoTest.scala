@@ -1,4 +1,4 @@
-package com.mrfunkycold.demo.demo
+package com.mrfunkycold.demo
 
 import org.junit.Assert._
 import org.junit.{Before, Test}

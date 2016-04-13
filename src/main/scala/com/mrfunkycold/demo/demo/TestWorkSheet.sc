@@ -1,4 +1,4 @@
-import com.mrfunkycold.demo.demo.Demo
+import com.mrfunkycold.demo.Demo
 
 "hello world"
 

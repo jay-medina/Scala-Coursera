@@ -1,4 +1,4 @@
-import com.mrfunkycold.demo.week4.hw.Huffman._
+
 
 val chars = List('a','a','a','a','a','a','a','a',
   'b','b','b','c','d','e','f','g','h').map(_.toUpper)
